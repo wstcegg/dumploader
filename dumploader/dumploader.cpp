@@ -116,8 +116,6 @@ int load_dump(const char *f1, const char *f2, char *info)
 {
 	CMiniDumpReader cmr;
 	int res = cmr.Open(f1, f2);
-	//printf("open succeed");
-
 
 	// Ïß³Ì²»¿Õ
 	if (0 == res) {
@@ -140,7 +138,7 @@ int load_dump(const char *f1, const char *f2, char *info)
 					d.Accept(&printer);
 					std::string s = printer.CStr();
 
-					strcpy(info, s.c_str());
+					strncpy_s(info, 128000, s.c_str(), 128000);
 					return 0;
 				}
 			}
@@ -150,6 +148,11 @@ int load_dump(const char *f1, const char *f2, char *info)
 			std::cout << e.what() << std::endl;
 		}
 	}
+	else{
+		//printf("open failed: %d", res);
+	}
+
+
 	return 1;
 }
 
@@ -168,13 +171,38 @@ int test(char *f1, char *f2)
 }
 
 
-int _tmain(int argc, _TCHAR* argv[])
+//int _tmain(int argc, _TCHAR* argv[])
+//{
+//	char file1[] = "E:\\reports\\e1\\classified\\valid\\error_report_1\\crashdump.dmp";
+//	char file2[] = "D:\\code\\TOOLS\\released_program\\swc_free_bin_4578\\bin\\release";
+//
+//	char *f1 = file1;
+//	char *f2 = file2;
+//	if (argc > 1)
+//	{
+//		f1 = argv[1];
+//		f2 = argv[2];
+//	}
+//
+//	test(file1, file2);
+//
+//	return 0;
+//}
+
+
+int main(int argc, char *argv[])
 {
-	char f1[] = "E:\\testInitial\\testMFC\\bin\\4521_892\\275000_285000_4521\\zip\\error_report_275020\\crashdump.dmp";
-	char f2[] = "D:\\code\\TOOLS\\released_program\\swc_free_bin_4521\\bin\\release";
+	char file1[] = "E:\\reports\\classified\\error_report_19756\\error_report_41729\\crashdump.dmp";
+	char file2[] = "D:\\code\\TOOLS\\released_program\\swc_free_bin_4578\\bin\\release";
+
+	char *f1 = file1;
+	char *f2 = file2;
+
+	if (argc >= 3){
+		f1 = argv[1];
+		f2 = argv[2];
+	}
 
 	test(f1, f2);
-
 	return 0;
 }
-
