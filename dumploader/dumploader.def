@@ -1,2 +1,3 @@
 EXPORTS
    load_dump			 @1
+   load_dump2			 @2

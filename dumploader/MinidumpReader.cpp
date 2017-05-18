@@ -43,15 +43,7 @@ BOOL CALLBACK SymRegisterCallbackProc64(
 
 CMiniDumpReader::CMiniDumpReader()
 {
-    m_bLoaded = FALSE;
-    m_bReadSysInfoStream = FALSE;
-    m_bReadExceptionStream = FALSE;
-    m_bReadModuleListStream = FALSE;
-    m_bReadMemoryListStream = FALSE;
-    m_bReadThreadListStream = FALSE;
-    m_hFileMiniDump = INVALID_HANDLE_VALUE;
-    m_hFileMapping = NULL;
-    m_pMiniDumpStartPtr = NULL;
+	this->Clear();
 }
 
 CMiniDumpReader::~CMiniDumpReader()
@@ -236,11 +228,44 @@ void CMiniDumpReader::Close()
 
     m_pMiniDumpStartPtr = NULL;
 
+	//// Ð¶ÔØµ÷ÊÔ·ûºÅ
+	//std::vector<MdmpModule>::iterator itModule = m_DumpData.m_Modules.begin();
+	//for (; itModule != m_DumpData.m_Modules.end(); itModule++)
+	//{
+	//	if (NULL != m_DumpData.m_hProcess)
+	//	{
+	//		SymUnloadModule64(m_DumpData.m_hProcess, itModule->m_uBaseAddr);
+	//	}
+	//}
+	//
+
     if(m_DumpData.m_hProcess!=NULL)
     {
         SymCleanup(m_DumpData.m_hProcess);
     }
+
+	//	must be called in the end!
+	this->Clear();
 }
+
+void CMiniDumpReader::Clear()
+{
+	m_bLoaded = FALSE;
+	m_bReadSysInfoStream = FALSE;
+	m_bReadExceptionStream = FALSE;
+	m_bReadModuleListStream = FALSE;
+	m_bReadMemoryListStream = FALSE;
+	m_bReadThreadListStream = FALSE;
+
+	m_sFileName = "";
+	m_sSymSearchPath = "";
+	m_hFileMiniDump = INVALID_HANDLE_VALUE;
+	m_hFileMapping = NULL;
+	m_pMiniDumpStartPtr = NULL;
+
+	m_DumpData.clear();
+};
+
 
 BOOL CMiniDumpReader::CheckDbgHelpApiVersion()
 {

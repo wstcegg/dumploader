@@ -1,0 +1,139 @@
+E:\pycharm\CrashAnalyze\release\reports\unzip\error_report_15090\crashdump.dmp
+D:\code\TOOLS\released_program\swc_free_bin_4578\bin\release
+result: 0
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<miniDump>
+	<stack>
+		<frame offset="11632820" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseMonitor" offset64="132" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="759" />
+		<frame offset="11622489" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseObject" offset64="409" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="204" />
+		<frame offset="4205944" module="-1" symbol="ReleaseGlobal" offset64="88" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\swcapp\swcapp.cpp" lineNum="126" />
+		<frame offset="4214334" module="-1" symbol="CSwcAppApp::ExitInstance" offset64="14" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\swcapp\swcapp.cpp" lineNum="794" />
+		<frame offset="4470000" module="-1" symbol="theApp" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="2016530045" module="mfc80xu.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+	</stack>
+</miniDump>
+
+E:\pycharm\CrashAnalyze\release\reports\unzip\error_report_15091\crashdump.dmp
+D:\code\TOOLS\released_program\swc_free_bin_4578\bin\release
+result: 0
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<miniDump>
+	<stack>
+		<frame offset="36274308" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseMonitor" offset64="84" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="757" />
+		<frame offset="36263977" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseObject" offset64="361" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="199" />
+		<frame offset="4206008" module="-1" symbol="MakeFileHashList" offset64="8" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\swcapp\swcapp.cpp" lineNum="131" />
+		<frame offset="-652096631" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="81208312" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="1703792" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="4365352" module="-1" symbol="CxxThrowException" offset64="2054" srcFile="" lineNum="-1" />
+		<frame offset="4361137" module="-1" symbol="operator new" offset64="11" srcFile="f:\sp\vctools\crt_bld\self_x86\crt\src\newopnt.cpp" lineNum="15" />
+		<frame offset="2009163696" module="ntdll.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="2009214676" module="ntdll.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+	</stack>
+</miniDump>
+
+E:\pycharm\CrashAnalyze\release\reports\unzip\error_report_15092\crashdump.dmp
+D:\code\TOOLS\released_program\swc_free_bin_4578\bin\release
+result: 0
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<miniDump>
+	<stack>
+		<frame offset="1933492" module="GlobalEnvironment.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+	</stack>
+</miniDump>
+
+E:\pycharm\CrashAnalyze\release\reports\unzip\error_report_15093\crashdump.dmp
+D:\code\TOOLS\released_program\swc_free_bin_4578\bin\release
+result: 0
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<miniDump>
+	<stack>
+		<frame offset="1933444" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseMonitor" offset64="84" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="757" />
+		<frame offset="1923113" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseObject" offset64="361" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="199" />
+		<frame offset="4206008" module="-1" symbol="MakeFileHashList" offset64="8" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\swcapp\swcapp.cpp" lineNum="131" />
+		<frame offset="-794185820" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="65150352" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="1376112" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="4365352" module="-1" symbol="CxxThrowException" offset64="2054" srcFile="" lineNum="-1" />
+		<frame offset="4361137" module="-1" symbol="operator new" offset64="11" srcFile="f:\sp\vctools\crt_bld\self_x86\crt\src\newopnt.cpp" lineNum="15" />
+		<frame offset="2001382256" module="ntdll.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="2001432876" module="ntdll.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+	</stack>
+</miniDump>
+
+E:\pycharm\CrashAnalyze\release\reports\unzip\error_report_15094\crashdump.dmp
+D:\code\TOOLS\released_program\swc_free_bin_4578\bin\release
+result: 0
+
+E:\pycharm\CrashAnalyze\release\reports\unzip\error_report_15095\crashdump.dmp
+D:\code\TOOLS\released_program\swc_free_bin_4578\bin\release
+result: 0
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<miniDump>
+	<stack>
+		<frame offset="8355972" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseMonitor" offset64="84" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="757" />
+		<frame offset="8345641" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseObject" offset64="361" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="199" />
+		<frame offset="4206008" module="-1" symbol="MakeFileHashList" offset64="8" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\swcapp\swcapp.cpp" lineNum="131" />
+		<frame offset="-1334341232" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="64823176" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="1376112" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="4365352" module="-1" symbol="CxxThrowException" offset64="2054" srcFile="" lineNum="-1" />
+		<frame offset="4361137" module="-1" symbol="operator new" offset64="11" srcFile="f:\sp\vctools\crt_bld\self_x86\crt\src\newopnt.cpp" lineNum="15" />
+		<frame offset="2008787824" module="ntdll.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="2008838420" module="ntdll.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+	</stack>
+</miniDump>
+
+E:\pycharm\CrashAnalyze\release\reports\unzip\error_report_15096\crashdump.dmp
+D:\code\TOOLS\released_program\swc_free_bin_4578\bin\release
+result: 0
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<miniDump>
+	<stack>
+		<frame offset="2588804" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseMonitor" offset64="84" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="757" />
+		<frame offset="2578473" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseObject" offset64="361" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="199" />
+		<frame offset="4206008" module="-1" symbol="MakeFileHashList" offset64="8" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\swcapp\swcapp.cpp" lineNum="131" />
+		<frame offset="-976271700" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="32854920" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="1638264" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="4365352" module="-1" symbol="CxxThrowException" offset64="2054" srcFile="" lineNum="-1" />
+		<frame offset="4361137" module="-1" symbol="operator new" offset64="11" srcFile="f:\sp\vctools\crt_bld\self_x86\crt\src\newopnt.cpp" lineNum="15" />
+		<frame offset="2010601669" module="ntdll.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="1638380" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+	</stack>
+</miniDump>
+
+E:\pycharm\CrashAnalyze\release\reports\unzip\error_report_15097\crashdump.dmp
+D:\code\TOOLS\released_program\swc_free_bin_4578\bin\release
+result: 0
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<miniDump>
+	<stack>
+		<frame offset="4030644" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseMonitor" offset64="132" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="759" />
+		<frame offset="4020313" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseObject" offset64="409" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="204" />
+		<frame offset="4205944" module="-1" symbol="ReleaseGlobal" offset64="88" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\swcapp\swcapp.cpp" lineNum="126" />
+		<frame offset="4214334" module="-1" symbol="CSwcAppApp::ExitInstance" offset64="14" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\swcapp\swcapp.cpp" lineNum="794" />
+		<frame offset="4470000" module="-1" symbol="theApp" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="2016530045" module="mfc80xu.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+	</stack>
+</miniDump>
+
+E:\pycharm\CrashAnalyze\release\reports\unzip\error_report_15098\crashdump.dmp
+D:\code\TOOLS\released_program\swc_free_bin_4578\bin\release
+result: 0
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<miniDump>
+	<stack>
+		<frame offset="2982020" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseMonitor" offset64="84" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="757" />
+		<frame offset="2971689" module="GlobalEnvironment.dll" symbol="CGlobalEnvLite::ReleaseObject" offset64="361" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\globalenvironment\globalenvlite.cpp" lineNum="199" />
+		<frame offset="4206008" module="-1" symbol="MakeFileHashList" offset64="8" srcFile="d:\project\svnroot\luke\trunk_3_layer\src\swcapp\swcapp.cpp" lineNum="131" />
+		<frame offset="702667162" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="33827152" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="1638264" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="4365352" module="-1" symbol="CxxThrowException" offset64="2054" srcFile="" lineNum="-1" />
+		<frame offset="4361137" module="-1" symbol="operator new" offset64="11" srcFile="f:\sp\vctools\crt_bld\self_x86\crt\src\newopnt.cpp" lineNum="15" />
+		<frame offset="2010259149" module="ntdll.dll" symbol="" offset64="0" srcFile="" lineNum="-1" />
+		<frame offset="1638380" module="-1" symbol="" offset64="0" srcFile="" lineNum="-1" />
+	</stack>
+</miniDump>
+

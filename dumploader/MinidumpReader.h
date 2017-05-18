@@ -80,20 +80,10 @@ struct MdmpData
 {
     MdmpData()
     {
-        m_hProcess = INVALID_HANDLE_VALUE;
-        m_uProcessorArchitecture = 0;
-        m_uchProductType = 0;
-        m_ulVerMajor = 0;
-        m_ulVerMinor = 0;
-        m_ulVerBuild = 0;
-        m_uExceptionCode = 0;
-        m_uExceptionAddress = 0;
-        m_uExceptionThreadId = 0;
-        m_pExceptionThreadContext = NULL;
+		this->clear();
     }
 
     HANDLE m_hProcess; // Process ID
-
     USHORT m_uProcessorArchitecture; // CPU architecture
     UCHAR  m_uchNumberOfProcessors;  // Number of processors
     UCHAR  m_uchProductType;         // Type of machine (workstation, server, ...)
@@ -116,13 +106,37 @@ struct MdmpData
 
 	// by kidd
 	std::vector<MdmpStackFrame> m_CrashStack;
+
+	void clear()
+	{
+		// clear simple struct
+		m_hProcess = INVALID_HANDLE_VALUE;
+		m_uProcessorArchitecture = 0;
+		m_uchProductType = 0;
+		m_ulVerMajor = 0;
+		m_ulVerMinor = 0;
+		m_ulVerBuild = 0;
+		m_uExceptionCode = 0;
+		m_uExceptionAddress = 0;
+		m_uExceptionThreadId = 0;
+		m_pExceptionThreadContext = NULL;
+
+		// clear complicated struct
+		m_Threads.clear();
+		m_ThreadIndex.clear();
+		m_Modules.clear();
+		m_ModuleIndex.clear();
+		m_MemRanges.clear();
+		m_LoadLog.clear();
+
+		m_CrashStack.clear();
+	}
 };
 
 // Class for opening minidumps
 class CMiniDumpReader
 {
 public:
-
     /* Construction/destruction */
     CMiniDumpReader();
     ~CMiniDumpReader();
@@ -131,6 +145,7 @@ public:
 
     // Opens a minidump (DMP) file
     int Open(CString sFileName, CString sSymSearchPath);
+	bool isOpen(){ return m_bLoaded; };
 
     // Retreives stack trace for specified thread ID
 	int StackWalk(DWORD dwThreadId);
@@ -138,6 +153,8 @@ public:
 
     // Closes the opened minidump file
     void Close();
+	// Clear all information
+	void Clear();
 
     BOOL CheckDbgHelpApiVersion();
 
@@ -153,7 +170,6 @@ public:
     BOOL m_bReadModuleListStream; // Was module list stream read?
     BOOL m_bReadMemoryListStream; // Was memory list stream read?
     BOOL m_bReadThreadListStream; // Was thread list stream read?
-
 private:
 
     /* Internally used member functions */
