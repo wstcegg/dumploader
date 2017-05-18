@@ -116,6 +116,8 @@ struct MdmpData
 		m_ulVerMajor = 0;
 		m_ulVerMinor = 0;
 		m_ulVerBuild = 0;
+		m_sCSDVer = "";
+
 		m_uExceptionCode = 0;
 		m_uExceptionAddress = 0;
 		m_uExceptionThreadId = 0;
@@ -193,12 +195,12 @@ private:
     int ReadThreadListStream();
 
     /* Member variables */
+	int m_nDumpReaderThreadID;
 
     CString m_sFileName;    // Minidump file name.
     CString m_sSymSearchPath; // The list of symbol search dirs passed.
     HANDLE m_hFileMiniDump; // Handle to opened .DMP file
     HANDLE m_hFileMapping;  // Handle to memory mapping object
     LPVOID m_pMiniDumpStartPtr; // Pointer to the biginning of memory-mapped minidump
-
 };
 

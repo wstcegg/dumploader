@@ -110,7 +110,10 @@ int CMiniDumpReader::Open(CString sFileName, CString sSymSearchPath)
         return 3;
     }
 
-    m_DumpData.m_hProcess = (HANDLE)(++dwProcessID);
+	if (m_nDumpReaderThreadID > 0)
+		m_DumpData.m_hProcess = (HANDLE)(m_nDumpReaderThreadID);	// attention!!!
+	else
+		m_DumpData.m_hProcess = (HANDLE)(++dwProcessID);			// attention!!!
 
     DWORD dwOptions = 0;
     dwOptions |= SYMOPT_DEFERRED_LOADS; // Symbols are not loaded until a reference is made requiring the symbols be loaded.
@@ -213,8 +216,11 @@ int CMiniDumpReader::Open(CString sFileName, CString sSymSearchPath)
 
 void CMiniDumpReader::Close()
 {
-    UnmapViewOfFile(m_pMiniDumpStartPtr);
-
+	if (m_pMiniDumpStartPtr != NULL)
+	{
+		UnmapViewOfFile(m_pMiniDumpStartPtr);
+		m_pMiniDumpStartPtr = NULL;
+	}
     if(m_hFileMapping!=NULL)
     {
         CloseHandle(m_hFileMapping);
@@ -226,7 +232,6 @@ void CMiniDumpReader::Close()
 		m_hFileMiniDump = INVALID_HANDLE_VALUE;
     }
 
-    m_pMiniDumpStartPtr = NULL;
 
 	//// Ð¶ÔØµ÷ÊÔ·ûºÅ
 	//std::vector<MdmpModule>::iterator itModule = m_DumpData.m_Modules.begin();
@@ -257,6 +262,7 @@ void CMiniDumpReader::Clear()
 	m_bReadMemoryListStream = FALSE;
 	m_bReadThreadListStream = FALSE;
 
+	m_nDumpReaderThreadID = -1;
 	m_sFileName = "";
 	m_sSymSearchPath = "";
 	m_hFileMiniDump = INVALID_HANDLE_VALUE;

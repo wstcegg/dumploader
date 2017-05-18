@@ -20,7 +20,8 @@ TiXmlElement *makeNode_frame(const MdmpStackFrame &frame, const std::vector<Mdmp
 	str.Format(_T("%d"), frame.m_dwAddrPCOffset);
 	frameNode->SetAttribute("offset", strconv.t2a(str));
 
-	if (frame.m_nModuleRowID > 0)
+	if (frame.m_nModuleRowID >= 0
+		&& frame.m_nModuleRowID < static_cast<int>(modules.size()))
 		str.Format(_T("%s"), modules[frame.m_nModuleRowID].m_sModuleName);
 	else
 		str.Format(_T("-1"));
@@ -205,14 +206,19 @@ extern "C" __declspec(dllexport)
 int load_dump2(int thread_id, const char *f1, const char *f2, char *info)
 {
 	if (thread_id < 0 || thread_id > 3)
+	{
+		sprintf_s(info, 300, "thread_id: %d is invalid!", thread_id);
 		return 1;
+	}
 
 	__try
 	{
 		close_cmr(thread_id);
-		load_dump2_helper(thread_id, f1, f2, info);
-		close_cmr(thread_id);
-		return 0;
+		if (0 == load_dump2_helper(thread_id, f1, f2, info))
+		{
+			close_cmr(thread_id);
+			return 0;
+		}
 	}
 	__except (EXCEPTION_EXECUTE_HANDLER)
 	{
@@ -279,7 +285,7 @@ int test2_multi()
 
 int main(int argc, char *argv[])
 {
-	char file1[] = "E:\\pycharm\\CrashAnalyze\\release\\reports\\unzip\\error_report_15099\\crashdump.dmp";
+	char file1[] = "E:\\reports\\access_violation\\error_report_16893\\crashdump.dmp";
 	char file2[] = "D:\\code\\TOOLS\\released_program\\swc_free_bin_4578\\bin\\release";
 
 	char *f1 = file1;
@@ -290,8 +296,8 @@ int main(int argc, char *argv[])
 		f2 = argv[2];
 	}
 
-	//test(f1, f2);
+	test2(f1, f2);
 
-	test2_multi();
+	//test2_multi();
 	return 0;
 }
