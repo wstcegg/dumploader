@@ -7,6 +7,9 @@
 #include "tinyxml.h"
 #include <string>
 
+#include <fstream>
+
+
 CMiniDumpReader CMiniDumpReaderArr[4];
 
 // 创建崩溃行frame节点
@@ -285,8 +288,8 @@ int test2_multi()
 
 int main(int argc, char *argv[])
 {
-	char file1[] = "E:\\reports\\access_violation\\error_report_16893\\crashdump.dmp";
-	char file2[] = "D:\\code\\TOOLS\\released_program\\swc_free_bin_4578\\bin\\release";
+	char file1[] = "E:\\reports\\6_7\\error_report_30\\crashdump.dmp";
+	char file2[] = "D:\\code\\TOOLS\\released_program\\swc_free_bin_4767\\bin\\release";
 
 	char *f1 = file1;
 	char *f2 = file2;
